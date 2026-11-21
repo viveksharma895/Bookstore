@@ -1,5 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import {
+  normalizeSpaces,
+  spaceRules,
+  createNormalizedChangeHandler,
+} from "../utils/validation";
 
 function Login() {
   const [showPassword, setShowPassword] = useState(false);
@@ -27,6 +33,39 @@ function Login() {
     }
   }, [location, navigate]);
 
+  // use react hook form for form handling
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    defaultValues: { email: "", password: "", remember: false },
+  });
+
+  const onSubmit = (data) => console.log(data);
+
+  const emailField = register("email", {
+    required: "Email is required",
+    pattern: {
+      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+      message: "Enter a valid email address",
+    },
+    validate: spaceRules,
+    setValueAs: normalizeSpaces,
+  });
+
+  const passwordField = register("password", {
+    required: "Password is required",
+    minLength: {
+      value: 6,
+      message: "Password must be at least 6 characters",
+    },
+    validate: spaceRules,
+    setValueAs: normalizeSpaces,
+  });
+
+  // use react hook form for form handling
+
   return (
     <>
       <div>
@@ -34,7 +73,11 @@ function Login() {
           <div className="modal-box relative w-full max-w-md rounded-2xl bg-white p-6 shadow-xl sm:p-8">
             {/* Close Button */}
             <form method="dialog">
-              <button className="btn btn-sm btn-circle btn-ghost absolute right-3 top-3">
+              <button
+                type="submit"
+                className="btn btn-sm btn-circle btn-ghost absolute right-3 top-3"
+                aria-label="Close login dialog"
+              >
                 ✕
               </button>
             </form>
@@ -50,30 +93,57 @@ function Login() {
             </div>
 
             {/* Login Form */}
-            <form className="space-y-5">
+            <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-5">
               {/* Email */}
               <div>
-                <label className="mb-2 block text-sm font-semibold text-gray-700">
+                <label
+                  htmlFor="login-email"
+                  className="mb-2 block text-sm font-semibold text-gray-700"
+                >
                   Email Address
                 </label>
                 <input
+                  id="login-email"
                   type="email"
                   placeholder="Enter your email address"
-                  className="w-full rounded-lg border border-gray-300 bg-gray-50 px-4 py-3 text-sm text-gray-800 outline-none transition placeholder:text-gray-400 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-100"
+                  aria-invalid={errors.email ? "true" : "false"}
+                  className={`w-full rounded-lg border bg-gray-50 px-4 py-3 text-sm text-gray-800 outline-none transition placeholder:text-gray-400 focus:bg-white focus:ring-2 ${
+                    errors.email
+                      ? "border-red-500 focus:border-red-500 focus:ring-red-100"
+                      : "border-gray-300 focus:border-indigo-500 focus:ring-indigo-100"
+                  }`}
+                  {...emailField}
+                  onChange={createNormalizedChangeHandler(emailField)}
                 />
+                {errors.email && (
+                  <p className="mt-1 text-xs text-red-600">
+                    {errors.email.message}
+                  </p>
+                )}
               </div>
 
               {/* Password */}
               <div>
-                <label className="mb-2 block text-sm font-semibold text-gray-700">
+                <label
+                  htmlFor="login-password"
+                  className="mb-2 block text-sm font-semibold text-gray-700"
+                >
                   Password
                 </label>
 
                 <div className="relative">
                   <input
+                    id="login-password"
                     type={showPassword ? "text" : "password"}
                     placeholder="Enter your password"
-                    className="w-full rounded-lg border border-gray-300 bg-gray-50 px-4 py-3 pr-16 text-sm text-gray-800 outline-none transition placeholder:text-gray-400 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-100"
+                    aria-invalid={errors.password ? "true" : "false"}
+                    className={`w-full rounded-lg border bg-gray-50 px-4 py-3 pr-16 text-sm text-gray-800 outline-none transition placeholder:text-gray-400 focus:bg-white focus:ring-2 ${
+                      errors.password
+                        ? "border-red-500 focus:border-red-500 focus:ring-red-100"
+                        : "border-gray-300 focus:border-indigo-500 focus:ring-indigo-100"
+                    }`}
+                    {...passwordField}
+                    onChange={createNormalizedChangeHandler(passwordField)}
                   />
 
                   <button
@@ -84,6 +154,11 @@ function Login() {
                     {showPassword ? "Hide" : "Show"}
                   </button>
                 </div>
+                {errors.password && (
+                  <p className="mt-1 text-xs text-red-600">
+                    {errors.password.message}
+                  </p>
+                )}
               </div>
 
               {/* Remember & Forgot Password */}
@@ -92,6 +167,7 @@ function Login() {
                   <input
                     type="checkbox"
                     className="h-4 w-4 rounded border-gray-300 accent-indigo-600"
+                    {...register("remember")}
                   />
                   Remember me
                 </label>

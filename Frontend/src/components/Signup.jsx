@@ -1,5 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import {
+  normalizeSpaces,
+  spaceRules,
+  createNormalizedChangeHandler,
+} from "../utils/validation";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
@@ -7,16 +13,48 @@ function Signup() {
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const [form, setForm] = useState({ name: "", email: "", password: "" });
 
-  const handleChange = (event) => {
-    setForm({ ...form, [event.target.name]: event.target.value });
-  };
+  // use react hook form for form handling
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    defaultValues: { name: "", email: "", password: "" },
+  });
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const onSubmit = (data) => {
+    console.log(data);
     setSubmitted(true);
   };
+
+  const nameField = register("name", {
+    required: "Name is required",
+    minLength: { value: 2, message: "Name must be at least 2 characters" },
+    validate: spaceRules,
+    setValueAs: normalizeSpaces,
+  });
+
+  const emailField = register("email", {
+    required: "Email is required",
+    pattern: {
+      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+      message: "Enter a valid email address",
+    },
+    validate: spaceRules,
+    setValueAs: normalizeSpaces,
+  });
+
+  const passwordField = register("password", {
+    required: "Password is required",
+    minLength: {
+      value: 6,
+      message: "Password must be at least 6 characters",
+    },
+    validate: spaceRules,
+    setValueAs: normalizeSpaces,
+  });
+  // use react hook form for form handling
 
   return (
     <>
@@ -148,7 +186,11 @@ function Signup() {
             </div>
 
             {/* Signup Form */}
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <form
+              onSubmit={handleSubmit(onSubmit)}
+              noValidate
+              className="space-y-5"
+            >
               {/* Name */}
               <div>
                 <label
@@ -159,14 +201,22 @@ function Signup() {
                 </label>
                 <input
                   id="signup-name"
-                  name="name"
                   type="text"
-                  required
-                  value={form.name}
-                  onChange={handleChange}
                   placeholder="Enter your full name"
-                  className="w-full rounded-lg border border-gray-300 bg-gray-50 px-4 py-3 text-sm text-gray-800 outline-none transition placeholder:text-gray-400 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-100 dark:border-slate-600 dark:bg-slate-700 dark:text-white dark:focus:bg-slate-700"
+                  aria-invalid={errors.name ? "true" : "false"}
+                  className={`w-full rounded-lg border bg-gray-50 px-4 py-3 text-sm text-gray-800 outline-none transition placeholder:text-gray-400 focus:bg-white focus:ring-2 dark:bg-slate-700 dark:text-white dark:focus:bg-slate-700 ${
+                    errors.name
+                      ? "border-red-500 focus:border-red-500 focus:ring-red-100 dark:border-red-500"
+                      : "border-gray-300 focus:border-indigo-500 focus:ring-indigo-100 dark:border-slate-600"
+                  }`}
+                  {...nameField}
+                  onChange={createNormalizedChangeHandler(nameField)}
                 />
+                {errors.name && (
+                  <p className="mt-1 text-xs text-red-600">
+                    {errors.name.message}
+                  </p>
+                )}
               </div>
 
               {/* Email */}
@@ -179,14 +229,22 @@ function Signup() {
                 </label>
                 <input
                   id="signup-email"
-                  name="email"
                   type="email"
-                  required
-                  value={form.email}
-                  onChange={handleChange}
                   placeholder="Enter your email address"
-                  className="w-full rounded-lg border border-gray-300 bg-gray-50 px-4 py-3 text-sm text-gray-800 outline-none transition placeholder:text-gray-400 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-100 dark:border-slate-600 dark:bg-slate-700 dark:text-white dark:focus:bg-slate-700"
+                  aria-invalid={errors.email ? "true" : "false"}
+                  className={`w-full rounded-lg border bg-gray-50 px-4 py-3 text-sm text-gray-800 outline-none transition placeholder:text-gray-400 focus:bg-white focus:ring-2 dark:bg-slate-700 dark:text-white dark:focus:bg-slate-700 ${
+                    errors.email
+                      ? "border-red-500 focus:border-red-500 focus:ring-red-100 dark:border-red-500"
+                      : "border-gray-300 focus:border-indigo-500 focus:ring-indigo-100 dark:border-slate-600"
+                  }`}
+                  {...emailField}
+                  onChange={createNormalizedChangeHandler(emailField)}
                 />
+                {errors.email && (
+                  <p className="mt-1 text-xs text-red-600">
+                    {errors.email.message}
+                  </p>
+                )}
               </div>
 
               {/* Password */}
@@ -200,14 +258,16 @@ function Signup() {
                 <div className="relative">
                   <input
                     id="signup-password"
-                    name="password"
                     type={showPassword ? "text" : "password"}
-                    required
-                    minLength={6}
-                    value={form.password}
-                    onChange={handleChange}
                     placeholder="Enter your password"
-                    className="w-full rounded-lg border border-gray-300 bg-gray-50 px-4 py-3 pr-16 text-sm text-gray-800 outline-none transition placeholder:text-gray-400 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-100 dark:border-slate-600 dark:bg-slate-700 dark:text-white dark:focus:bg-slate-700"
+                    aria-invalid={errors.password ? "true" : "false"}
+                    className={`w-full rounded-lg border bg-gray-50 px-4 py-3 pr-16 text-sm text-gray-800 outline-none transition placeholder:text-gray-400 focus:bg-white focus:ring-2 dark:bg-slate-700 dark:text-white dark:focus:bg-slate-700 ${
+                      errors.password
+                        ? "border-red-500 focus:border-red-500 focus:ring-red-100 dark:border-red-500"
+                        : "border-gray-300 focus:border-indigo-500 focus:ring-indigo-100 dark:border-slate-600"
+                    }`}
+                    {...passwordField}
+                    onChange={createNormalizedChangeHandler(passwordField)}
                   />
 
                   <button
@@ -218,6 +278,11 @@ function Signup() {
                     {showPassword ? "Hide" : "Show"}
                   </button>
                 </div>
+                {errors.password && (
+                  <p className="mt-1 text-xs text-red-600">
+                    {errors.password.message}
+                  </p>
+                )}
               </div>
 
               {/* Signup Button */}
