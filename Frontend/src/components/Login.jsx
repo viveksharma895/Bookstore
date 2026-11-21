@@ -1,13 +1,36 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useRef, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 function Login() {
   const [showPassword, setShowPassword] = useState(false);
+  const dialogRef = useRef(null);
+  const openedRef = useRef(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  // Open the popup only for the redirect from the signup page, then clear the
+  // flag so refreshing the home page does not show the popup again
+  useEffect(() => {
+    if (
+      location.state?.openLogin &&
+      !openedRef.current &&
+      dialogRef.current &&
+      !dialogRef.current.open
+    ) {
+      dialogRef.current.showModal();
+      openedRef.current = true;
+
+      navigate(location.pathname + location.search + location.hash, {
+        replace: true,
+        state: null,
+      });
+    }
+  }, [location, navigate]);
 
   return (
     <>
       <div>
-        <dialog id="my_modal_3" className="modal">
+        <dialog ref={dialogRef} id="my_modal_3" className="modal">
           <div className="modal-box relative w-full max-w-md rounded-2xl bg-white p-6 shadow-xl sm:p-8">
             {/* Close Button */}
             <form method="dialog">

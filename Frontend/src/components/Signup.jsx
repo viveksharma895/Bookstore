@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
 function Signup() {
+  const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", password: "" });
@@ -19,8 +21,121 @@ function Signup() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-blue-50 px-4 pt-28 pb-20 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800">
-        <div className="mx-auto w-full max-w-md">
+      <main className="relative min-h-screen overflow-hidden bg-gradient-to-br from-indigo-50 via-white to-blue-50 px-4 pt-28 pb-20 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800">
+        {/* Animated SVG background graphics */}
+        <div
+          className="pointer-events-none absolute inset-0 overflow-hidden"
+          aria-hidden="true"
+        >
+          {/* Subtle dotted texture */}
+          <svg
+            className="absolute inset-0 h-full w-full text-indigo-200 dark:text-slate-700/60"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <pattern
+                id="signup-dots"
+                width="32"
+                height="32"
+                patternUnits="userSpaceOnUse"
+              >
+                <circle cx="2" cy="2" r="1.6" fill="currentColor" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#signup-dots)" />
+          </svg>
+
+          {/* Drifting soft blobs */}
+          <svg
+            className="signup-drift absolute -left-20 top-1/3 h-64 w-64 text-indigo-100 dark:text-indigo-950/60"
+            viewBox="0 0 200 200"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="100" cy="100" r="90" fill="currentColor" />
+          </svg>
+          <svg
+            className="signup-drift-slow absolute -right-24 top-10 h-72 w-72 text-blue-100 dark:text-blue-950/60"
+            viewBox="0 0 200 200"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="100" cy="100" r="90" fill="currentColor" />
+          </svg>
+
+          {/* Floating open book */}
+          <svg
+            className="signup-float absolute left-[5%] top-28 h-24 w-24 text-indigo-300 dark:text-indigo-800/50 sm:h-36 sm:w-36"
+            viewBox="0 0 64 64"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M32 14c-5-4-12-5-20-3v34c8-2 15-1 20 3 5-4 12-5 20-3V11c-8-2-15-1-20 3Z" />
+            <path d="M32 14v34" />
+            <path d="M17 21c4-.5 7 0 10 2M17 28c4-.5 7 0 10 2M37 23c3-2 6-2.5 10-2M37 30c3-2 6-2.5 10-2" />
+          </svg>
+
+          {/* Floating stack of books */}
+          <svg
+            className="signup-float-slow absolute right-[6%] top-52 h-20 w-20 text-blue-300 dark:text-blue-900/50 sm:h-32 sm:w-32"
+            viewBox="0 0 64 64"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect x="10" y="42" width="44" height="9" rx="2" />
+            <rect x="14" y="30" width="38" height="9" rx="2" />
+            <rect x="12" y="18" width="40" height="9" rx="2" />
+          </svg>
+
+          {/* Floating book (lower right) */}
+          <svg
+            className="signup-float-delayed absolute bottom-16 right-[12%] h-20 w-20 text-violet-300 dark:text-violet-900/50"
+            viewBox="0 0 64 64"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M32 14c-5-4-12-5-20-3v34c8-2 15-1 20 3 5-4 12-5 20-3V11c-8-2-15-1-20 3Z" />
+            <path d="M32 14v34" />
+          </svg>
+
+          {/* Twinkling sparkles */}
+          <svg
+            className="signup-twinkle absolute left-[18%] top-1/3 h-6 w-6 text-yellow-400 dark:text-yellow-600/60"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M12 0c.7 6.6 4.7 10.6 12 12-7.3 1.4-11.3 5.4-12 12C11.3 17.4 7.3 13.4 0 12 7.3 10.6 11.3 6.6 12 0Z" />
+          </svg>
+          <svg
+            className="signup-twinkle-delayed absolute right-[22%] top-24 h-5 w-5 text-pink-400 dark:text-pink-700/60"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M12 0c.7 6.6 4.7 10.6 12 12-7.3 1.4-11.3 5.4-12 12C11.3 17.4 7.3 13.4 0 12 7.3 10.6 11.3 6.6 12 0Z" />
+          </svg>
+          <svg
+            className="signup-twinkle absolute bottom-28 left-[12%] h-4 w-4 text-indigo-400 dark:text-indigo-700/60"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M12 0c.7 6.6 4.7 10.6 12 12-7.3 1.4-11.3 5.4-12 12C11.3 17.4 7.3 13.4 0 12 7.3 10.6 11.3 6.6 12 0Z" />
+          </svg>
+        </div>
+
+        <div className="relative z-10 mx-auto w-full max-w-md">
           <div className="rounded-2xl bg-white p-6 shadow-xl shadow-indigo-100 sm:p-8 dark:bg-slate-800 dark:shadow-none">
             {/* Signup Header */}
             <div className="mb-6 text-center">
@@ -125,7 +240,7 @@ function Signup() {
               Already have an account?
               <button
                 type="button"
-                onClick={() => document.getElementById("my_modal_3")?.showModal()}
+                onClick={() => navigate("/", { state: { openLogin: true } })}
                 className="ml-1 font-semibold text-indigo-600 hover:underline dark:text-indigo-400"
               >
                 Login
