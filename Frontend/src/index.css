@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:wght@400;500&display=swap");
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* Make dark: utilities follow the .dark class set by the theme toggle */
+@custom-variant dark (&:where(.dark, .dark *));
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* rainbow for cources headline */
+.rainbow-text {
+  background: linear-gradient(
+    90deg,
+    #8b0000,
+    #c2410c,
+    #b45309,
+    #166534,
+    #0f766e,
+    #1e40af,
+    #5b21b6,
+    #9d174d,
+    #8b0000
+  );
+
+  background-size: 300% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow-flow 25s linear infinite;
+}
+
+@keyframes rainbow-flow {
+  0% {
+    background-position: 0% center;
+  }
+
+  100% {
+    background-position: 300% center;
+  }
+}
+/* rainbow for cources headline */

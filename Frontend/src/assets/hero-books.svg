@@ -1,0 +1,183 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 640 520"
+  fill="none"
+  role="img"
+  aria-labelledby="booksTitle booksDesc"
+>
+  <title id="booksTitle">Open book with flying pages</title>
+  <desc id="booksDesc">
+    An open book with text on its pages, three closed books around it, and pages
+    flying into the air. Transparent background.
+  </desc>
+
+  <defs>
+    <linearGradient id="pageLeft" x1="126" y1="294" x2="300" y2="410" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fffdf7" />
+      <stop offset="1" stop-color="#efe3cc" />
+    </linearGradient>
+    <linearGradient id="pageRight" x1="474" y1="294" x2="300" y2="410" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fffdf7" />
+      <stop offset="1" stop-color="#eadfc6" />
+    </linearGradient>
+    <linearGradient id="coverGrad" x1="300" y1="280" x2="300" y2="430" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4f46e5" />
+      <stop offset="1" stop-color="#312e81" />
+    </linearGradient>
+    <linearGradient id="spineShade" x1="286" y1="0" x2="314" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5a4628" stop-opacity="0" />
+      <stop offset="0.5" stop-color="#5a4628" stop-opacity="0.22" />
+      <stop offset="1" stop-color="#5a4628" stop-opacity="0" />
+    </linearGradient>
+    <radialGradient id="ground" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#1e1b4b" stop-opacity="0.16" />
+      <stop offset="1" stop-color="#1e1b4b" stop-opacity="0" />
+    </radialGradient>
+
+    <filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="7" stdDeviation="7" flood-color="#1e1b4b" flood-opacity="0.18" />
+    </filter>
+
+    <clipPath id="clipLeft">
+      <path d="M300 314 C258 284 196 274 126 294 L118 390 C194 368 260 378 300 410 Z" />
+    </clipPath>
+    <clipPath id="clipRight">
+      <path d="M300 314 C342 284 404 274 474 294 L482 390 C406 368 340 378 300 410 Z" />
+    </clipPath>
+
+    <g id="flyPage">
+      <path
+        d="M-36 -40 C-20 -48 6 -48 22 -42 L26 30 C10 36 -16 36 -32 30 Z"
+        fill="#fffdf7"
+        stroke="#e6dbc6"
+        stroke-width="2"
+      />
+      <path d="M22 -42 L26 30 C20 32 14 34 8 35 L10 -36 Z" fill="#f1e7d5" />
+      <path d="M-24 -18 H12" stroke="#c9bca3" stroke-width="3.5" stroke-linecap="round" />
+      <path d="M-24 -6 H16" stroke="#c9bca3" stroke-width="3.5" stroke-linecap="round" />
+      <path d="M-24 6 H8" stroke="#c9bca3" stroke-width="3.5" stroke-linecap="round" />
+      <path d="M-24 18 H-2" stroke="#c9bca3" stroke-width="3.5" stroke-linecap="round" />
+    </g>
+  </defs>
+
+  <!-- soft grounding shadow -->
+  <ellipse cx="330" cy="486" rx="248" ry="18" fill="url(#ground)" />
+
+  <!-- closed book leaning behind, left -->
+  <g transform="translate(122 238) rotate(-9)">
+    <rect x="-12" y="-6" width="64" height="142" rx="6" fill="#0f766e" />
+    <rect x="-12" y="-6" width="13" height="142" rx="6" fill="#115e59" />
+    <rect x="40" y="-2" width="12" height="134" rx="3" fill="#fff6e6" />
+    <rect x="4" y="28" width="34" height="6" rx="3" fill="#5eead4" opacity="0.75" />
+    <rect x="4" y="44" width="20" height="6" rx="3" fill="#5eead4" opacity="0.45" />
+  </g>
+
+  <!-- open book -->
+  <g filter="url(#softShadow)">
+    <!-- covers -->
+    <path
+      d="M300 322 C256 290 190 280 116 302 L106 404 C188 382 258 392 300 426 Z"
+      fill="url(#coverGrad)"
+    />
+    <path
+      d="M300 322 C344 290 410 280 484 302 L494 404 C412 382 342 392 300 426 Z"
+      fill="url(#coverGrad)"
+    />
+
+    <!-- page stack underlayers -->
+    <path
+      d="M300 314 C258 284 196 274 126 294 L118 390 C194 368 260 378 300 410 Z"
+      transform="translate(-4 7)"
+      fill="#e6d9c0"
+    />
+    <path
+      d="M300 314 C342 284 404 274 474 294 L482 390 C406 368 340 378 300 410 Z"
+      transform="translate(4 7)"
+      fill="#e6d9c0"
+    />
+
+    <!-- pages -->
+    <path
+      d="M300 314 C258 284 196 274 126 294 L118 390 C194 368 260 378 300 410 Z"
+      fill="url(#pageLeft)"
+      stroke="#e3d7c0"
+      stroke-width="2"
+    />
+    <path
+      d="M300 314 C342 284 404 274 474 294 L482 390 C406 368 340 378 300 410 Z"
+      fill="url(#pageRight)"
+      stroke="#e3d7c0"
+      stroke-width="2"
+    />
+
+    <!-- text on the pages -->
+    <g
+      clip-path="url(#clipLeft)"
+      transform="rotate(-6 213 350)"
+      font-family="Georgia, serif"
+      font-size="13"
+      font-style="italic"
+      fill="#a2906f"
+    >
+      <text x="148" y="338">Once upon a time,</text>
+      <text x="148" y="359">a curious mind</text>
+      <text x="148" y="380">opened a book.</text>
+    </g>
+    <g
+      clip-path="url(#clipRight)"
+      transform="rotate(6 387 350)"
+      font-family="Georgia, serif"
+      font-size="13"
+      font-style="italic"
+      fill="#a2906f"
+    >
+      <text x="330" y="342">and found a world</text>
+      <text x="330" y="364">of endless wonder.</text>
+    </g>
+
+    <!-- spine fold shading -->
+    <rect x="286" y="316" width="28" height="100" fill="url(#spineShade)" />
+  </g>
+
+  <!-- motion arcs -->
+  <path
+    d="M226 268 C246 222 282 190 322 174"
+    stroke="#c7b9a0"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-dasharray="3 9"
+    opacity="0.55"
+  />
+  <path
+    d="M340 266 C392 236 438 210 470 186"
+    stroke="#c7b9a0"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-dasharray="3 9"
+    opacity="0.4"
+  />
+
+  <!-- flying pages -->
+  <use href="#flyPage" transform="translate(404 176) rotate(18)" filter="url(#softShadow)" />
+  <use href="#flyPage" transform="translate(316 108) rotate(-8) scale(0.92)" filter="url(#softShadow)" />
+  <use href="#flyPage" transform="translate(214 152) rotate(-26) scale(0.8)" filter="url(#softShadow)" />
+  <use href="#flyPage" transform="translate(486 118) rotate(34) scale(0.62)" filter="url(#softShadow)" />
+
+  <!-- sparkles -->
+  <path d="M520 214 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3 Z" fill="#fbbf24" opacity="0.9" />
+  <path d="M168 104 l2 6 6 2 -6 2 -2 6 -2 -6 -6 -2 6 -2 Z" fill="#fbbf24" opacity="0.7" />
+  <path d="M568 296 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2 Z" fill="#60a5fa" opacity="0.7" />
+
+  <!-- stacked closed books, front right -->
+  <g>
+    <rect x="406" y="430" width="196" height="28" rx="6" fill="#1d4ed8" />
+    <rect x="419" y="435" width="178" height="18" rx="3" fill="#fff7e8" />
+    <path d="M419 444 H597" stroke="#e6d7bd" stroke-width="2" />
+    <rect x="406" y="430" width="13" height="28" rx="6" fill="#1e40af" />
+
+    <rect x="372" y="458" width="236" height="32" rx="7" fill="#9f1239" />
+    <rect x="385" y="463" width="218" height="22" rx="3" fill="#fff7e8" />
+    <path d="M385 474 H603" stroke="#e6d7bd" stroke-width="2" />
+    <rect x="372" y="458" width="15" height="32" rx="7" fill="#7f1d1d" />
+  </g>
+</svg>
