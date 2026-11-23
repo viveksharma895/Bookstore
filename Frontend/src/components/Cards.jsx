@@ -16,9 +16,6 @@ function Cards({ item }) {
             {item.name}
             <div className="badge badge-secondary badge-sm">{item.category}</div>
           </h2>
-          <p className="line-clamp-3 text-sm text-base-content/70">
-            {item.description}
-          </p>
           <div className="card-actions mt-auto justify-end pt-2">
             <div className="badge badge-outline h-8 w-24 border-blue-300 bg-blue-500 text-white">
               &#8377; {item.price.toFixed(2)}

@@ -5,8 +5,7 @@
     "title": "The Silent Library",
     "price": 0,
     "category": "Free",
-    "image": "/New folder/book_007.avif",
-    "description": "In a town where no one is allowed to speak after sunset, a young librarian discovers a hidden room filled with books that answer questions in whispers, and must decide how much truth her neighbours can bear."
+    "image": "/New folder/book_007.avif"
   },
   {
     "id": "2",
@@ -14,8 +13,7 @@
     "title": "Whispers of the Monsoon",
     "price": 0,
     "category": "Free",
-    "image": "/New folder/book_004.jpg",
-    "description": "Three generations of a family gather in their crumbling ancestral home as the first rains arrive, and old secrets surface with the floodwaters in this tender portrait of love, loss, and belonging."
+    "image": "/New folder/book_004.jpg"
   },
   {
     "id": "3",
@@ -23,8 +21,7 @@
     "title": "The Last Chapter",
     "price": 299,
     "category": "Mystery",
-    "image": "/New folder/book_003.jpg",
-    "description": "When a famous novelist is found dead on the very day he finished his final manuscript, a retired detective must read between the lines to catch a killer who wrote the perfect crime."
+    "image": "/New folder/book_003.jpg"
   },
   {
     "id": "4",
@@ -32,8 +29,7 @@
     "title": "Beyond the Blue Horizon",
     "price": 0,
     "category": "Free",
-    "image": "/New folder/book_005.avif",
-    "description": "A young sailor sets out on a leaky fishing boat to cross an ocean she has only seen in maps, and discovers that the greatest distance to travel is the one between fear and freedom."
+    "image": "/New folder/book_005.avif"
   },
   {
     "id": "5",
@@ -41,8 +37,7 @@
     "title": "Cracks in the Mirror",
     "price": 0,
     "category": "Free",
-    "image": "/New folder/book_010.avif",
-    "description": "A criminal psychologist begins to suspect that the patient she has been treating for years is the anonymous caller who has been taunting the police with details only the killer could know."
+    "image": "/New folder/book_010.avif"
   },
   {
     "id": "6",
@@ -50,8 +45,7 @@
     "title": "A Garden of Forgotten Things",
     "price": 275,
     "category": "Short Stories",
-    "image": "/New folder/book_004.jpg",
-    "description": "An elderly woman plants a seed for every memory she is afraid of losing, and the strange garden that grows attracts neighbours who each come looking for something they left behind."
+    "image": "/New folder/book_004.jpg"
   },
   {
     "id": "7",
@@ -59,8 +53,7 @@
     "title": "The Clockmaker's Daughter",
     "price": 0,
     "category": "Free",
-    "image": "/New folder/book_008.jpg",
-    "description": "In a 19th-century workshop where every clock is built to outlive its owner, a gifted young apprentice uncovers a mechanism that could rewrite her family's past, and possibly its future."
+    "image": "/New folder/book_008.jpg"
   },
   {
     "id": "8",
@@ -68,8 +61,7 @@
     "title": "Echoes of Tomorrow",
     "price": 480,
     "category": "Science Fiction",
-    "image": "/New folder/book_005.avif",
-    "description": "A scientist receives messages from a version of herself twenty years in the future, and each warning she follows pushes the world closer to the catastrophe she is trying to prevent."
+    "image": "/New folder/book_005.avif"
   },
   {
     "id": "9",
@@ -77,8 +69,7 @@
     "title": "The Art of Quiet Living",
     "price": 0,
     "category": "Free",
-    "image": "/New folder/book_004.jpg",
-    "description": "A practical guide to slowing down in a world that rewards noise, offering simple daily practices for attention, rest, and finding contentment in a life that is smaller and richer than before."
+    "image": "/New folder/book_004.jpg"
   },
   {
     "id": "10",
@@ -86,8 +77,7 @@
     "title": "Rivers That Never Sleep",
     "price": 330,
     "category": "Drama",
-    "image": "/New folder/book_006.jpg",
-    "description": "Two estranged brothers reunite to scatter their father's ashes along the river he fished every morning, and along the way they confront the argument that divided them thirty years ago."
+    "image": "/New folder/book_006.jpg"
   },
   {
     "id": "11",
@@ -95,8 +85,7 @@
     "title": "The Midnight Post Office",
     "price": 0,
     "category": "Free",
-    "image": "/New folder/book_006.jpg",
-    "description": "At exactly midnight a post office appears on an empty street, accepting letters addressed to people who are gone, and the new clerk slowly learns that some deliveries must never be made."
+    "image": "/New folder/book_006.jpg"
   },
   {
     "id": "12",
@@ -104,8 +93,7 @@
     "title": "Fragments of a Broken Sky",
     "price": 420,
     "category": "Romance",
-    "image": "/New folder/book_002.jpg",
-    "description": "A painter who has lost the ability to see colour and a pilot who has lost his nerve meet in a coastal town, and together they learn to rebuild the pieces of the lives they thought were finished."
+    "image": "/New folder/book_002.jpg"
   },
   {
     "id": "13",
@@ -113,8 +101,7 @@
     "title": "The Weight of Small Things",
     "price": 0,
     "category": "Free",
-    "image": "/New folder/book_003.jpg",
-    "description": "A collection of interlinked stories about the objects people keep, from a cracked teacup to a train ticket, and the quiet ways these small things carry the heaviest moments of a life."
+    "image": "/New folder/book_003.jpg"
   },
   {
     "id": "14",
@@ -122,8 +109,7 @@
     "title": "Shadow of the Peacock",
     "price": 370,
     "category": "Crime",
-    "image": "/New folder/book_008.avif",
-    "description": "A priceless painting vanishes from a locked gallery during a charity gala, and the only witness is a security guard who swears the thief was wearing a peacock mask and knew every camera by name."
+    "image": "/New folder/book_008.avif"
   },
   {
     "id": "15",
@@ -131,8 +117,7 @@
     "title": "Letters I Never Sent",
     "price": 0,
     "category": "Free",
-    "image": "/New folder/book_002.jpg",
-    "description": "Drawn from decades of private correspondence, this memoir follows a village schoolteacher whose unsent letters reveal a life of sacrifice, stubborn hope, and love expressed only on paper."
+    "image": "/New folder/book_002.jpg"
   },
   {
     "id": "16",
@@ -140,8 +125,7 @@
     "title": "The Language of Rain",
     "price": 180,
     "category": "Poetry",
-    "image": "/New folder/book_008.jpg",
-    "description": "A slim, luminous collection of poems that listen to the rain as it falls on rooftops, graveyards, and first dates, finding in every drop a word for what cannot quite be said."
+    "image": "/New folder/book_008.jpg"
   },
   {
     "id": "17",
@@ -149,8 +133,7 @@
     "title": "A Thousand Paper Cranes",
     "price": 0,
     "category": "Free",
-    "image": "/New folder/book_005.avif",
-    "description": "A hospital volunteer folds a paper crane for every patient she meets, never dreaming that one of them will teach her how to hope again after a loss she has never spoken about."
+    "image": "/New folder/book_005.avif"
   },
   {
     "id": "18",
@@ -158,8 +141,7 @@
     "title": "The Forgotten Kingdom",
     "price": 560,
     "category": "Epic Fantasy",
-    "image": "/New folder/book_002.jpg",
-    "description": "A mapmaker's apprentice stumbles into a kingdom erased from every chart and every memory, where the exiled queen offers him a crown in exchange for the one thing he cannot give back."
+    "image": "/New folder/book_002.jpg"
   },
   {
     "id": "19",
@@ -167,8 +149,7 @@
     "title": "Where the Road Ends",
     "price": 290,
     "category": "Travel",
-    "image": "/New folder/book_006.jpg",
-    "description": "A courier takes one last delivery across a mountain pass before the snow closes it for the season, and the stranger waiting at the end of the road knows more about him than he expected."
+    "image": "/New folder/book_006.jpg"
   },
   {
     "id": "20",
@@ -176,8 +157,7 @@
     "title": "The Mindful Hour",
     "price": 0,
     "category": "Free",
-    "image": "/New folder/book_008.avif",
-    "description": "A one-hour-a-day programme for building calm and clarity, with guided reflections, breathing exercises, and practical habits that fit into even the busiest of mornings."
+    "image": "/New folder/book_008.avif"
   },
   {
     "id": "21",
@@ -185,8 +165,7 @@
     "title": "The Cartographer's Secret",
     "price": 499,
     "category": "Paid",
-    "image": "/New folder/book_001.avif",
-    "description": "A mapmaker's apprentice finds a coastline drawn on no chart in existence, and follows it to an island that the sea has been hiding from every sailor for a hundred years."
+    "image": "/New folder/book_001.avif"
   },
   {
     "id": "22",
@@ -194,8 +173,7 @@
     "title": "Salt and Saffron",
     "price": 375,
     "category": "Paid",
-    "image": "/New folder/book_010.avif",
-    "description": "A widowed cook in a coastal town begins feeding strangers who arrive with her husband's handwriting in their pockets, and learns how far a recipe can carry a secret."
+    "image": "/New folder/book_010.avif"
   },
   {
     "id": "23",
@@ -203,8 +181,7 @@
     "title": "The Ninth Hour",
     "price": 425,
     "category": "Paid",
-    "image": "/New folder/book_008.jpg",
-    "description": "In a hospital that runs on borrowed time, a night nurse keeps a ledger of the small mercies she performs, until one name in it refuses to stay crossed out."
+    "image": "/New folder/book_008.jpg"
   },
   {
     "id": "24",
@@ -212,8 +189,7 @@
     "title": "Half a Moon",
     "price": 289,
     "category": "Paid",
-    "image": "/New folder/book_001.avif",
-    "description": "Two sisters separated by a border and a decade of silence begin writing to the same address, each believing the other is the one who left first."
+    "image": "/New folder/book_001.avif"
   },
   {
     "id": "25",
@@ -221,8 +197,7 @@
     "title": "The Glasshouse Keeper",
     "price": 550,
     "category": "Paid",
-    "image": "/New folder/book_001.avif",
-    "description": "A botanist tends the last glasshouse in a city that has forgotten rain, and discovers that the rarest plant inside it only blooms when someone tells the truth."
+    "image": "/New folder/book_001.avif"
   },
   {
     "id": "26",
@@ -230,8 +205,7 @@
     "title": "The Paper Lantern",
     "price": 340,
     "category": "Drama",
-    "image": "/New folder/book_002.jpg",
-    "description": "A father and daughter repair paper lanterns in a fading workshop, and each lantern they mend seems to bring back a conversation they never had."
+    "image": "/New folder/book_002.jpg"
   },
   {
     "id": "27",
@@ -239,8 +213,7 @@
     "title": "Ashes of the Old Year",
     "price": 410,
     "category": "Mystery",
-    "image": "/New folder/book_003.jpg",
-    "description": "On the last night of winter, a village burns its old almanac and finds a name written in the ashes of a house that has not stood for fifty years."
+    "image": "/New folder/book_003.jpg"
   },
   {
     "id": "28",
@@ -248,8 +221,7 @@
     "title": "The Honey Bee Chronicles",
     "price": 0,
     "category": "Free",
-    "image": "/New folder/book_004.jpg",
-    "description": "A retired teacher keeps a hive on her balcony and records the small dramas of the apiary, discovering that even the smallest creatures have stories worth telling."
+    "image": "/New folder/book_004.jpg"
   },
   {
     "id": "29",
@@ -257,8 +229,7 @@
     "title": "A Map of Quiet Places",
     "price": 0,
     "category": "Free",
-    "image": "/New folder/book_005.avif",
-    "description": "An introverted traveller documents the silent corners of the world, from empty chapels to abandoned platforms, and the peace that waits in overlooked places."
+    "image": "/New folder/book_005.avif"
   },
   {
     "id": "30",
@@ -266,8 +237,7 @@
     "title": "The Winter Bookshop",
     "price": 360,
     "category": "Romance",
-    "image": "/New folder/book_006.jpg",
-    "description": "Two rivals inherit a bookshop that only opens in winter, and must share the same small room until the thaw reveals which of them truly belongs there."
+    "image": "/New folder/book_006.jpg"
   },
   {
     "id": "31",
@@ -275,8 +245,7 @@
     "title": "Voices in the Attic",
     "price": 0,
     "category": "Free",
-    "image": "/New folder/book_007.avif",
-    "description": "A young girl hears conversations coming from the attic of a house where no one has lived for decades, and slowly realises the voices know her name."
+    "image": "/New folder/book_007.avif"
   },
   {
     "id": "32",
@@ -284,8 +253,7 @@
     "title": "The Last Lighthouse",
     "price": 450,
     "category": "Drama",
-    "image": "/New folder/book_008.jpg",
-    "description": "As the sea claims the coastline, the final lighthouse keeper refuses to leave his post, and a journalist arrives to learn why a man would choose to stand against the tide."
+    "image": "/New folder/book_008.jpg"
   },
   {
     "id": "33",
@@ -293,8 +261,7 @@
     "title": "Threads of Gold",
     "price": 0,
     "category": "Free",
-    "image": "/New folder/book_008.avif",
-    "description": "A collection of poems woven from family heirlooms, sewing circles, and the golden threads that hold generations of women together across oceans and years."
+    "image": "/New folder/book_008.avif"
   },
   {
     "id": "34",
@@ -302,8 +269,7 @@
     "title": "The Secret Apothecary",
     "price": 590,
     "category": "Epic Fantasy",
-    "image": "/New folder/book_010.avif",
-    "description": "An apprentice healer inherits a shop whose bottles contain bottled memories, and must decide which of her customers deserves to forget and which must remember."
+    "image": "/New folder/book_010.avif"
   },
   {
     "id": "35",
@@ -311,8 +277,7 @@
     "title": "Nine Windows",
     "price": 0,
     "category": "Free",
-    "image": "/New folder/book_001.avif",
-    "description": "Each of nine windows in an old apartment block reveals a different moment in the life of the same woman, and a watcher begins to suspect the view is changing on its own."
+    "image": "/New folder/book_001.avif"
   },
   {
     "id": "36",
@@ -320,8 +285,7 @@
     "title": "The River Remembers",
     "price": 310,
     "category": "Short Stories",
-    "image": "/New folder/book_002.jpg",
-    "description": "A dozen stories follow the same river from mountain source to estuary, and the people who leave their secrets in its currents along the way."
+    "image": "/New folder/book_002.jpg"
   },
   {
     "id": "37",
@@ -329,8 +293,7 @@
     "title": "The Midnight Baker",
     "price": 0,
     "category": "Free",
-    "image": "/New folder/book_004.jpg",
-    "description": "A baker who works only after dark discovers that the customers who knock at three in the morning are not entirely of this world, and their orders are always for someone else."
+    "image": "/New folder/book_004.jpg"
   },
   {
     "id": "38",
@@ -338,8 +301,7 @@
     "title": "Glass and Shadow",
     "price": 475,
     "category": "Crime",
-    "image": "/New folder/book_008.jpg",
-    "description": "A restoration expert finds a hidden figure beneath the paint of a Renaissance portrait, and the discovery sends her into a labyrinth of forgery and family secrets."
+    "image": "/New folder/book_008.jpg"
   },
   {
     "id": "39",
@@ -347,8 +309,7 @@
     "title": "The Orchard of Years",
     "price": 0,
     "category": "Free",
-    "image": "/New folder/book_005.avif",
-    "description": "An old orchard bears fruit that ripens into different seasons of a family's life, and a grandmother teaches her grandson how to taste the years before they are gone."
+    "image": "/New folder/book_005.avif"
   },
   {
     "id": "40",
@@ -356,8 +317,7 @@
     "title": "Signals from the Deep",
     "price": 520,
     "category": "Science Fiction",
-    "image": "/New folder/book_007.avif",
-    "description": "A sonar operator on a deep-sea station begins receiving rhythmic pulses from the trench below, and the pattern matches a language no human has ever spoken."
+    "image": "/New folder/book_007.avif"
   },
   {
     "id": "41",
@@ -365,8 +325,7 @@
     "title": "A Room of Borrowed Light",
     "price": 0,
     "category": "Free",
-    "image": "/New folder/book_003.jpg",
-    "description": "A tenant moves into a room that only receives sunlight reflected from the building opposite, and begins to question what else in her life is borrowed."
+    "image": "/New folder/book_003.jpg"
   },
   {
     "id": "42",
@@ -374,8 +333,7 @@
     "title": "The Ferryman's Ledger",
     "price": 430,
     "category": "Fantasy",
-    "image": "/New folder/book_010.avif",
-    "description": "A ferryman keeps a ledger of every soul he carries across the river, until one night the name written at the top of the page is his own."
+    "image": "/New folder/book_010.avif"
   },
   {
     "id": "43",
@@ -383,8 +341,7 @@
     "title": "Small Hours",
     "price": 0,
     "category": "Free",
-    "image": "/New folder/book_006.jpg",
-    "description": "Quiet verses about the hours between midnight and dawn, when the world feels suspended and ordinary things take on an extraordinary clarity."
+    "image": "/New folder/book_006.jpg"
   },
   {
     "id": "44",
@@ -392,8 +349,7 @@
     "title": "The Wooden Horse",
     "price": 385,
     "category": "Historical Fiction",
-    "image": "/New folder/book_002.jpg",
-    "description": "In a war-torn village, a carpenter carves a wooden horse for a child who has not spoken since the soldiers left, and the toy becomes a symbol the whole town rallies around."
+    "image": "/New folder/book_002.jpg"
   },
   {
     "id": "45",
@@ -401,8 +357,7 @@
     "title": "The Sound of Rain on Tin",
     "price": 0,
     "category": "Free",
-    "image": "/New folder/book_008.avif",
-    "description": "A musician returns to the corrugated-roofed house of her childhood and finds that the rhythm of rain on tin is the only thing that can finish the song she began years ago."
+    "image": "/New folder/book_008.avif"
   },
   {
     "id": "46",
@@ -410,8 +365,7 @@
     "title": "The Clockwork Garden",
     "price": 560,
     "category": "Science Fiction",
-    "image": "/New folder/book_001.avif",
-    "description": "On a dying planet, the last garden is powered by clockwork and tended by machines, until a human hand is needed to wind the spring that keeps spring alive."
+    "image": "/New folder/book_001.avif"
   },
   {
     "id": "47",
@@ -419,8 +373,7 @@
     "title": "Bread and Salt",
     "price": 0,
     "category": "Free",
-    "image": "/New folder/book_004.jpg",
-    "description": "A collection of linked stories about a family bakery, where the recipes are guarded more fiercely than secrets and every loaf carries a piece of the past."
+    "image": "/New folder/book_004.jpg"
   },
   {
     "id": "48",
@@ -428,8 +381,7 @@
     "title": "The Vanishing Line",
     "price": 465,
     "category": "Thriller",
-    "image": "/New folder/book_003.jpg",
-    "description": "A forensic artist hired to reconstruct a face from a skull realises the features are being erased from her drawings overnight, as if someone is trying to hide the truth."
+    "image": "/New folder/book_003.jpg"
   },
   {
     "id": "49",
@@ -437,8 +389,7 @@
     "title": "Under the Same Sky",
     "price": 0,
     "category": "Free",
-    "image": "/New folder/book_005.avif",
-    "description": "Two strangers in different cities write letters to the stars, never expecting an answer, until the replies begin arriving in their own handwriting."
+    "image": "/New folder/book_005.avif"
   },
   {
     "id": "50",
@@ -446,8 +397,7 @@
     "title": "The Marble Staircase",
     "price": 395,
     "category": "Mystery",
-    "image": "/New folder/book_006.jpg",
-    "description": "A housekeeper in a crumbling mansion notices that one step of the marble staircase is always warm, and that it appears in every family photograph taken over a century."
+    "image": "/New folder/book_006.jpg"
   },
   {
     "id": "51",
@@ -455,8 +405,7 @@
     "title": "Songs for the Long Walk",
     "price": 0,
     "category": "Free",
-    "image": "/New folder/book_008.jpg",
-    "description": "A wanderer records the songs sung by fellow travellers on a long pilgrimage, preserving voices that would otherwise vanish with the dust of the road."
+    "image": "/New folder/book_008.jpg"
   },
   {
     "id": "52",
@@ -464,8 +413,7 @@
     "title": "The Queen of Cinders",
     "price": 610,
     "category": "Epic Fantasy",
-    "image": "/New folder/book_010.avif",
-    "description": "A scullery maid who can read the future in fireplace ash is pulled into a court intrigue that will decide whether the kingdom rises again or burns to the ground."
+    "image": "/New folder/book_010.avif"
   },
   {
     "id": "53",
@@ -473,8 +421,7 @@
     "title": "The Tide Pool",
     "price": 0,
     "category": "Free",
-    "image": "/New folder/book_007.avif",
-    "description": "A child spends a summer exploring a tide pool and discovers that the creatures stranded there each morning are trying to tell her something about the changing sea."
+    "image": "/New folder/book_007.avif"
   },
   {
     "id": "54",
@@ -482,8 +429,7 @@
     "title": "Paper Cities",
     "price": 355,
     "category": "Short Stories",
-    "image": "/New folder/book_002.jpg",
-    "description": "Twelve stories about people who build entire worlds out of paper, from folded maps to origami skyscrapers, and the moment each creation begins to feel real."
+    "image": "/New folder/book_002.jpg"
   },
   {
     "id": "55",
@@ -491,8 +437,7 @@
     "title": "The Borrowed Name",
     "price": 0,
     "category": "Free",
-    "image": "/New folder/book_003.jpg",
-    "description": "A man answers to a name that is not his own for so long that he begins to forget which life was the original, and which one he invented to survive."
+    "image": "/New folder/book_003.jpg"
   },
   {
     "id": "56",
@@ -500,8 +445,7 @@
     "title": "The Lamp at the Window",
     "price": 420,
     "category": "Romance",
-    "image": "/New folder/book_006.jpg",
-    "description": "A lighthouse keeper's daughter leaves a lamp burning in the window each night, and a passing sailor begins steering his ship by the light that guides him home."
+    "image": "/New folder/book_006.jpg"
   },
   {
     "id": "57",
@@ -509,8 +453,7 @@
     "title": "Echoes in the Valley",
     "price": 0,
     "category": "Free",
-    "image": "/New folder/book_004.jpg",
-    "description": "A sound recordist captures the echoes of a valley and discovers that the landscape returns not just his voice, but voices from a village swallowed by a dam decades ago."
+    "image": "/New folder/book_004.jpg"
   },
   {
     "id": "58",
@@ -518,8 +461,7 @@
     "title": "The Last Cartographer",
     "price": 505,
     "category": "Travel",
-    "image": "/New folder/book_001.avif",
-    "description": "In a world where maps are made by satellite, an old mapmaker walks the final unmapped coastline, determined to put pen to paper before the place disappears."
+    "image": "/New folder/book_001.avif"
   },
   {
     "id": "59",
@@ -527,8 +469,7 @@
     "title": "Moth and Ember",
     "price": 0,
     "category": "Free",
-    "image": "/New folder/book_008.avif",
-    "description": "Delicate poems about attraction and destruction, fragile wings and steady flames, and the strange beauty of things that cannot survive their own longing."
+    "image": "/New folder/book_008.avif"
   },
   {
     "id": "60",
@@ -536,8 +477,7 @@
     "title": "The Silent Orchestra",
     "price": 480,
     "category": "Drama",
-    "image": "/New folder/book_002.jpg",
-    "description": "When a conductor loses her hearing, she teaches her orchestra to play in the dark, and together they discover music that exists only in the space between sound and memory."
+    "image": "/New folder/book_002.jpg"
   },
   {
     "id": "61",
@@ -545,8 +485,7 @@
     "title": "Pilgrims of the Page",
     "price": 0,
     "category": "Free",
-    "image": "/New folder/book_005.avif",
-    "description": "A travelling librarian carries a sack of books across a barren region, and each borrowed volume changes the course of the village that receives it."
+    "image": "/New folder/book_005.avif"
   },
   {
     "id": "62",
@@ -554,8 +493,7 @@
     "title": "The Hidden Room",
     "price": 440,
     "category": "Crime",
-    "image": "/New folder/book_003.jpg",
-    "description": "A locksmith called to open a sealed room in a suburban home finds a space that has been untouched for twenty years, and a set of clues no one was meant to find."
+    "image": "/New folder/book_003.jpg"
   },
   {
     "id": "63",
@@ -563,8 +501,7 @@
     "title": "A Season of Kites",
     "price": 0,
     "category": "Free",
-    "image": "/New folder/book_006.jpg",
-    "description": "Two boys build a kite to send a message to a father who left for the war, and the string of their invention unravels a summer of hope and quiet heartbreak."
+    "image": "/New folder/book_006.jpg"
   },
   {
     "id": "64",
@@ -572,8 +509,7 @@
     "title": "The Net of Stars",
     "price": 540,
     "category": "Science Fiction",
-    "image": "/New folder/book_007.avif",
-    "description": "A astronomer discovers that the stars are arranged in a deliberate pattern, a message spanning light-years that only becomes readable when viewed from a place no human has reached."
+    "image": "/New folder/book_007.avif"
   },
   {
     "id": "65",
@@ -581,7 +517,6 @@
     "title": "The House at the Edge of Town",
     "price": 0,
     "category": "Free",
-    "image": "/New folder/book_010.avif",
-    "description": "A family moves into a house that appears on no deed, and slowly learns that the building has been waiting for them to arrive for a very long time."
+    "image": "/New folder/book_010.avif"
   }
 ]
