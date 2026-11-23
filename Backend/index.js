@@ -1,12 +1,13 @@
 import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
-
+import cors from "cors";
 import bookRoutes from "./route/book.route.js";
 
 dotenv.config();
 
 const app = express();
+app.use(cors());
 const parsedPort = Number.parseInt(process.env.PORT, 10);
 const PORT =
   Number.isInteger(parsedPort) && parsedPort > 0 && parsedPort <= 65535

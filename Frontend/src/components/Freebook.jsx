@@ -1,7 +1,7 @@
-import List from "../../public/list.json";
+import { useEffect, useState } from "react";
+import axios from "axios";
 import SliderImport from "react-slick";
 import Cards from "./Cards";
-
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -10,9 +10,34 @@ import "slick-carousel/slick/slick-theme.css";
 // the Slider component itself, which makes React throw "Element type is invalid".
 const Slider = SliderImport.default ?? SliderImport;
 
-const freeBooks = List.filter((data) => data.category === "Free");
-
 function Freebook() {
+  // Hooks must live inside the component. Calling them at module scope throws
+  // "Invalid hook call" and crashes the whole home page on load.
+  const [book, setBook] = useState([]);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    const getBook = async () => {
+      try {
+        const res = await axios.get("http://localhost:4000/books");
+        if (isMounted) {
+          setBook(res.data.filter((data) => data.category === "Free"));
+        }
+      } catch (error) {
+        // Backend unavailable: keep the list empty instead of crashing.
+        if (import.meta.env.DEV) {
+          console.warn("Could not fetch books from the backend:", error.message);
+        }
+      }
+    };
+
+    getBook();
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
   // Slick Slider settings
   const settings = {
     dots: true,
@@ -67,7 +92,7 @@ function Freebook() {
 
       <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 pb-10">
         <Slider {...settings}>
-          {freeBooks.map((item) => (
+          {book.map((item) => (
             <Cards item={item} key={item.id} />
           ))}
         </Slider>
