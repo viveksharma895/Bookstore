@@ -2,6 +2,8 @@ import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 import cors from "cors";
+import swaggerUi from "swagger-ui-express";
+import swaggerSpec from "./swagger.js";
 import bookRoutes from "./route/book.route.js";
 import userRoutes from "./route/user.route.js";
 dotenv.config();
@@ -9,6 +11,9 @@ dotenv.config();
 const app = express();
 app.use(cors());
 app.use(express.json());
+
+// Interactive API docs: http://localhost:4000/api-docs
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 const parsedPort = Number.parseInt(process.env.PORT, 10);
 const PORT =
   Number.isInteger(parsedPort) && parsedPort > 0 && parsedPort <= 65535
