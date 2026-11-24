@@ -3,11 +3,12 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import cors from "cors";
 import bookRoutes from "./route/book.route.js";
-
+import userRoutes from "./route/user.route.js";
 dotenv.config();
 
 const app = express();
 app.use(cors());
+app.use(express.json());
 const parsedPort = Number.parseInt(process.env.PORT, 10);
 const PORT =
   Number.isInteger(parsedPort) && parsedPort > 0 && parsedPort <= 65535
@@ -26,6 +27,7 @@ mongoose
 //defining routes
 
 app.use("/books", bookRoutes);
+app.use("/users", userRoutes);
 
 app.get("/", (req, res) => {
   res.send("Book Store Backend");

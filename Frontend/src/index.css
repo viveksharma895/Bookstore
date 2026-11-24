@@ -116,3 +116,109 @@ body {
   }
 }
 /* animated signup background graphics */
+
+/* responsive free-books slider (scoped so other carousels are unaffected) */
+.freebook-slider .slick-track {
+  display: flex !important;
+}
+
+.freebook-slider .slick-slide {
+  height: inherit !important;
+}
+
+.freebook-slider .slick-slide > div {
+  height: 100%;
+}
+
+.freebook-slider .slick-arrow {
+  z-index: 10;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1px solid #bfdbfe;
+  border-radius: 9999px;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+}
+
+.freebook-slider .slick-arrow:hover {
+  background: #eff6ff;
+}
+
+.freebook-slider .slick-prev {
+  left: -0.5rem;
+}
+
+.freebook-slider .slick-next {
+  right: -0.5rem;
+}
+
+.freebook-slider .slick-prev::before,
+.freebook-slider .slick-next::before {
+  color: #2563eb;
+  font-size: 1.75rem;
+  line-height: 1;
+  opacity: 1;
+}
+
+.freebook-slider .slick-disabled {
+  opacity: 0.4;
+}
+
+.freebook-slider .slick-dots {
+  bottom: -1.75rem;
+}
+
+.freebook-slider .slick-dots li button {
+  width: 1.5rem;
+}
+
+.freebook-slider .slick-dots li button::before {
+  color: #93c5fd;
+  font-size: 0.5rem;
+  opacity: 1;
+}
+
+.freebook-slider .slick-dots li.slick-active button::before {
+  color: #2563eb;
+}
+
+.dark .freebook-slider .slick-arrow {
+  border-color: #334155;
+  background: #1e293b;
+}
+
+.dark .freebook-slider .slick-prev::before,
+.dark .freebook-slider .slick-next::before {
+  color: #93c5fd;
+}
+
+@media (max-width: 640px) {
+  /* Arrows overlay the single visible card instead of using dots. */
+  .freebook-slider .slick-arrow {
+    width: 2rem;
+    height: 2rem;
+    background: rgba(255, 255, 255, 0.92);
+  }
+
+  .freebook-slider .slick-prev {
+    left: 0.25rem;
+  }
+
+  .freebook-slider .slick-next {
+    right: 0.25rem;
+  }
+
+  .freebook-slider .slick-prev::before,
+  .freebook-slider .slick-next::before {
+    font-size: 1.5rem;
+  }
+
+  .dark .freebook-slider .slick-arrow {
+    background: rgba(30, 41, 59, 0.92);
+  }
+
+  .freebook-slider .slick-dots {
+    display: none !important;
+  }
+}
+/* responsive free-books slider */

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import {
@@ -13,6 +14,8 @@ function Signup() {
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [signupError, setSignupError] = useState("");
 
   // use react hook form for form handling
   const {
@@ -23,9 +26,26 @@ function Signup() {
     defaultValues: { name: "", email: "", password: "" },
   });
 
-  const onSubmit = (data) => {
-    console.log(data);
-    setSubmitted(true);
+  const onSubmit = async (data) => {
+    setSubmitting(true);
+    setSignupError("");
+    setSubmitted(false);
+
+    try {
+      await axios.post("http://localhost:4000/users/signup", {
+        fullname: data.name,
+        email: data.email,
+        password: data.password,
+      });
+      setSubmitted(true);
+    } catch (error) {
+      setSignupError(
+        error.response?.data?.message ||
+          "Could not create your account. Please try again.",
+      );
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const nameField = register("name", {
@@ -288,11 +308,21 @@ function Signup() {
               {/* Signup Button */}
               <button
                 type="submit"
-                className="w-full rounded-lg bg-indigo-600 py-3 font-semibold text-white shadow-md shadow-indigo-100 transition-all duration-200 hover:bg-indigo-700 active:scale-[0.98]"
+                disabled={submitting}
+                className="w-full rounded-lg bg-indigo-600 py-3 font-semibold text-white shadow-md shadow-indigo-100 transition-all duration-200 hover:bg-indigo-700 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60"
               >
-                Signup
+                {submitting ? "Creating account..." : "Signup"}
               </button>
             </form>
+
+            {signupError && (
+              <p
+                role="alert"
+                className="mt-4 text-center text-sm font-medium text-red-600 dark:text-red-400"
+              >
+                {signupError}
+              </p>
+            )}
 
             {submitted && (
               <p className="mt-4 text-center text-sm font-medium text-green-600 dark:text-green-400">
