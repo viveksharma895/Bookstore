@@ -37,6 +37,10 @@ function Signup() {
         email: data.email,
         password: data.password,
       });
+      localStorage.setItem(
+        "signupSuccess",
+        JSON.stringify({ email: data.email, name: data.name }),
+      );
       setSubmitted(true);
     } catch (error) {
       setSignupError(
